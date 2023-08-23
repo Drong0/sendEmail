@@ -17,11 +17,17 @@ def send_emails(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         email_address = data.get('email')
+        mock_link = "https://www.youtube.com/watch?v=XOxGFjYbCYw"
 
         if email_address:
             # Email content
             subject = 'Important Information'
-            message_text = 'Hello, ALDIK '
+            message_text = 'Dear Student, ' \
+                           f'\nThis is the link to IELTS mock test with proctoring system: [Click start mock]({mock_link} ' \
+                           '\n The duration is 3 hours. You are allowed to have breaks. ' \
+                           '\nSubmission deadline is Sunday 12am. \n' \
+                           'Good luck, \n' \
+                           'STP team'
 
             # Create the email message
             msg = MIMEMultipart()
