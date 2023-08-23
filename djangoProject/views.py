@@ -17,13 +17,13 @@ def send_emails(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         email_address = data.get('email')
-        mock_link = "https://www.youtube.com/watch?v=XOxGFjYbCYw"
+        mock_link = "https://chat.openai.com/?model=text-davinci-002-render-sha"
 
         if email_address:
             # Email content
             subject = 'Important Information'
             message_text = 'Dear Student, ' \
-                           f'\nThis is the link to IELTS mock test with proctoring system: [Click start mock]({mock_link} ' \
+                           f'\nThis is the link to IELTS mock test with proctoring system: <a href="{mock_link}">Click start mock</a>' \
                            '\n The duration is 3 hours. You are allowed to have breaks. ' \
                            '\nSubmission deadline is Sunday 12am. \n' \
                            'Good luck, \n' \
