@@ -21,11 +21,11 @@ def send_emails(request):
 
         if email_address:
             # Email content
-            subject = 'Important Information'
+            subject = 'NUET mock'
             message_text = 'Dear Student, ' \
-                           f'\nThis is the link to IELTS mock test with proctoring system:{mock_link}' \
-                           '\n The duration is 3 hours. You are allowed to have breaks. ' \
-                           '\nSubmission deadline is Sunday 12am. \n' \
+                           f'\nHere is your link to NUET mock:{mock_link}' \
+                           '\nThe duration is 2 hours. ' \
+                           '\nThe results will be released immediately.\n' \
                            'Good luck, \n' \
                            'STP team'
 
